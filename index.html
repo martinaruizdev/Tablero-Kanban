@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/icono.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Tablero Kanban</title>
+</head>
+<body>
+    <div class="tablero">
+        <h1>Tablero Kanban</h1>
+        <form id="todo-form">
+            <div>
+                <h2>Nueva Tarea:</h2>
+                <input type="text" placeholder="Nueva Tarea..." id="todo-input">
+            </div>
+            <div>
+                <h2>Descripción:</h2>
+                <input type="text" placeholder="Descripción..." id="todo-input2">
+            </div>
+            <div id="res">
+                <h2>Responsable:</h2>
+                <input type="text" placeholder="Responsable..." id="todo-input3">
+            </div>
+            <button type="submit">Agregar +</button>
+        </form>
+        <!-- fin form -->
+        <div class="contenedor"> 
+            <div class="columna" id="columna-tarea">
+                <h3 class="titulo">PENDIENTE <img src="img/pendiente.png" width="30"> </h3>
+
+            </div>
+            <div class="columna">
+                <h3 class="titulo">EN PROCESO <img src="img/proceso.png" alt="" width="26"> </h3>
+            </div>
+            <div class="columna">
+                <h3 class="titulo">TERMINADO <img src="img/terminado.png" alt="" width="25"> </h3>
+            </div>
+            <div class="columna" id="revision">
+                <h3 class="titulo">EN REVISIÓN <img src="img/revision.png" alt="" width="30"> </h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="drag.js"></script>
+    <script src="todo.js"></script>
+</body>
+</html>
